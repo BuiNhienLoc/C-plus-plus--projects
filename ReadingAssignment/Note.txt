@@ -1,0 +1,22 @@
+Template function: You can create a single function or a class that works with multiple data type by using templates.
+
+Template instantiation: A specific instance of a templated item; for example, if we have a templated class A, A<int> is a specific instantiation of A.
+
+Non-member function: A function that is not a member of a class. We will examine these in the context of friend functions in this article.
+
+Friend function: A function allows to access data from the protected and private area of other function.
+
+Friend class: A class allows to access data from the protected and private area of other class that is declared as friend.
+
+Binding: refers to the process that is used to convert identifiers (such as variable and function names) into addresses.
+Although binding is used for both variables and functions, in this lesson we’re going to focus on function binding.
+
+Early binding (also called static binding) means the compiler (or linker) is able to directly associate the identifier name (such as a function or variable name) with a machine address.
+
+In some programs, it is not possible to know which function will be called until runtime (when the program is run). This is known as late binding (or dynamic binding).
+In C++, one way to get late binding is to use function pointers. To review function pointers briefly, a function pointer is a type of pointer that points to a function instead of a variable.
+The function that a function pointer points to can be called by using the function call operator (()) on the pointer.
+
+Late binding is slightly less efficient since it involves an extra level of indirection. With early binding, the CPU can jump directly to the function’s address.
+With late binding, the program has to read the address held in the pointer and then jump to that address. This involves one extra step, making it slightly slower.
+However, the advantage of late binding is that it is more flexible than early binding, because decisions about what function to call do not need to be made until run time.
