@@ -1,1 +1,50 @@
+Function Overloading in C++:
+You can have multiple definitions for the same function name in the same scope. The definition of the function must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.
 
+Operators Overloading in C++:
+You can redefine or overload most of the built-in operators available in C++. Thus, a programmer can use operators with user-defined types as well.
+Overloaded operators are functions with special names: the keyword "operator" followed by the symbol for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.
+
+Overloadable/Non-overloadableOperators:
+Following is the list of operators, which can not be overloaded:
+::
+.*
+.	
+?:
+
+The unary operators:
+operate on a single operand and following are the examples of Unary operators −
+- The increment (++) and decrement (--) operators.
+- The unary minus (-) operator.
+- The logical not (!) operator.
+The unary operators operate on the object for which they were called and normally, this operator appears on the left side of the object, as in !obj, -obj, and ++obj but sometime they can be used as postfix as well like obj++ or obj--.
+
+The binary operators:
+take two arguments and following are the examples of Binary operators. You use binary operators very frequently like addition (+) operator, subtraction (-) operator and division (/) operator.
+
+The relational operators:
+supported by C++ language like (<, >, <=, >=, ==, etc.) which can be used to compare C++ built-in data types.
+You can overload any of these operators, which can be used to compare the objects of a class.
+
+Input/Output Operators Overloading:
+C++ is able to input and output the built-in data types using the stream extraction operator >> and the stream insertion operator <<. The stream insertion and stream extraction operators also can be overloaded to perform input and output for user-defined types like an object.
+Here, it is important to make operator overloading function a friend of the class because it would be called without creating an object.
+
+Overloading Increment ++ & Decrement --:
+The increment (++) and decrement (--) operators are two important unary operators available in C++.
+
+Assignment Operators Overloading in C++:
+You can overload the assignment operator (=) just as you can other operators and it can be used to create an object just like the copy constructor.
+
+Assignment Operators Overloading:
+You can overload the assignment operator (=) just as you can other operators and it can be used to create an object just like the copy constructor.
+
+Function Call Operator () Overloading:
+The function call operator () can be overloaded for objects of class type. When you overload ( ), you are not creating a new way to call a function. Rather, you are creating an operator function that can be passed an arbitrary number of parameters.
+
+Subscripting [] Operator Overloading:
+The subscript operator [] is normally used to access array elements. This operator can be overloaded to enhance the existing functionality of C++ arrays.
+
+Class Member Access Operator (->) Overloading:
+It is bit trickier. It is defined to give a class type a "pointer-like" behavior. The operator -> must be a member function. If used, its return type must be a pointer or an object of a class to which you can apply.
+The operator-> is used often in conjunction with the pointer-dereference operator * to implement "smart pointers." These pointers are objects that behave like normal pointers except they perform other tasks when you access an object through them, such as automatic object deletion either when the pointer is destroyed, or the pointer is used to point to another object.
