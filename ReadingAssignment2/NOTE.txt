@@ -1,1 +1,21 @@
+Upcasting and Downcasting
 
+Upcasting:
+is converting a derived-class reference or pointer to a base-class. In other words, upcasting allows us to treat a derived type as though it were its base type. It is always allowed for public inheritance, without an explicit type cast. This is a result of the is-a relationship between the base and derived classes.
+Upcasting allows us to treat a derived type as though it were its base type. That's how we decouple ourselves from knowing about the exact type we are dealing with.
+Note that the most important aspect of inheritance is not that it provides member functions for the new class, however. It's the relationship expressed between the new class and the base class. This relationship can be summarized by saying, "The new class is a type of the existing class."
+
+Downcasting:
+The opposite process, converting a base-class pointer (reference) to a derived-class pointer (reference) is called downcasting.
+is not allowed without an explicit type cast. The reason for this restriction is that the is-a relationship is not, in most of the cases, symmetric. A derived class could add new data members, and the class member functions that used these data members wouldn't apply to the base class.
+
+Dynamic Casting:
+The dynamic_cast operator answers the question of whether we can safely assign the address of an object to a pointer of a particular type.
+
+
+The Incredible Const Reference That Isn’t Const
+While working on the NamedType library I came across a situation that left me stunned in bewilderment: a const reference that allows modification of the object it refers to. Without a const_cast. Without a mutable. Without anything up the sleeve.
+
+A const reference that isn’t const
+Const reference or reference to const?
+What does it mean to modify a reference, to begin with? In theory, it would mean making it refer to another object, or not refer to anything. But both those possibilities are illegal in C++: a reference cannot rebind. It refers to the same object during the whole course of it life.
