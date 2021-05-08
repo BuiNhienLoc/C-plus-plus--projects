@@ -1,1 +1,61 @@
+Multiple Inheritance:
+A feature that a class can be derived from more than one classes
+The syntax is the same to the basic inheritance, while the base classes will be separated by commas “,”:
+     class Child_Class : public Base_1, public Base_2,…{}
+
+Void Keyword:
+When used as a function return type, the void keyword specifies that the function does not return a value.
+When used for a function's parameter list, void specifies that the function takes no parameters.
+When used in the declaration of a pointer, void specifies that the pointer is “universal”.
+A void pointer is a pointer that has no associated data type with it. 
+A void pointer can hold the address of any type and can be typecast to any type.
+A void* pointer cannot be dereferenced unless it is cast to another type.
+
+Naming Convventions Setter & Getter Method:
+CLASS NAME: 
+- Upper case letter - word separators
+- Lower case letter - rest of the word
+- First character - uppercase
+- Underscores are not permitted
+METHOD & FUNCTION NAMES:
+- Each method or function should begin with a verb
+- Prefixes and Suffixes are useful
+- Use the same naming rules for class names
+NO ALL UPPER CASE ABBREVIATIONS:
+- Even if you could use an all upper case abbreviation instead use an initial upper case letter followed by all lower case ones!
+POINTER VARIABLES:
+- Pointer should be prepended by a ‘p’
+- Place the * close to the variable name rather than the pointer type
+METHOD ARGUMENT NAMES:
+- The first character should be lowercase
+- All word beginnings after the first letter should be upper case as with class names
+GLOBAL CONSTANTS & STATIC VARIABLES:
+- Global constants should be all caps with ‘_’ separators
+- Static variables should be prepended with ‘s’
+GETTER & SETTER METHOD:
+- Encapsulation ("sensitive" data is hidden from users)
+- Purpose (Interact with the value of a private member)
+- GETTER METHOD:
+  + Cannot change value from the time it's been created. 
+  + This is a constant function (will not alter any member variables of the class it belongs to).
+- SETTER METHOD
+
+Const Keyword:
+2 place to place const with *:
+- Before the *: Prevent changes to the pointed value
+                Direct changes are still possible
+- After the *: Lock the pointer in place
+Const with class:
+const after method promise not to change who is calling it.
+However, const function only plays with const function.
+
+Upcast & Downcast:
+Casting = converting from one data type to another data type
+UPCAST:
+is converting a derived-class reference or pointer to a base-class. In other words, upcasting allows us to treat a derived type as though it were its base type. It is always allowed for public inheritance, without an explicit type cast. This is a result of the is-a relationship between the base and derived classes.
+Upcasting allows us to treat a derived type as though it were its base type. That's how we decouple ourselves from knowing about the exact type we are dealing with.
+Note that the most important aspect of inheritance is not that it provides member functions for the new class, however. It's the relationship expressed between the new class and the base class. This relationship can be summarized by saying, "The new class is a type of the existing class."
+DOWNCAST:
+The opposite process, converting a base-class pointer (reference) to a derived-class pointer (reference) is called downcasting.
+is not allowed without an explicit type cast. The reason for this restriction is that the is-a relationship is not, in most of the cases, symmetric. A derived class could add new data members, and the class member functions that used these data members wouldn't apply to the base class.
 
